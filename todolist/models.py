@@ -9,5 +9,5 @@ class ToDoList(models.Model):
 class ToDoListItem(models.Model):
     list = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
-    created_date = models.DateTimeField(auto_created=True)
+    created_date = models.DateTimeField(auto_now_add=True)
     is_done = models.BooleanField(default=False)

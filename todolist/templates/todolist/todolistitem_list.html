@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo 항목들</title>
+</head>
+<body>
+    <h1>ToDo List Items</h1>
+    <hr/>
+    <ul>
+    {% for item in todoitems %}
+        <li><a href="">{{ item.title }} - {{ item.created_date }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
