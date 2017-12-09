@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo 리스트들</title>
+</head>
+<body>
+    <h1>ToDo List lists</h1>
+    <hr/>
+    <ul>
+    {% for list in todolist %}
+        <li><a href="{% url 'ListDetail' list.id %}">{{ list.title }} - {{ list.description }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
